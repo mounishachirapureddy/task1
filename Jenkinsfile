@@ -10,6 +10,16 @@ pipeline {
         stage('Checkout1') {
         // Checkout code from the 'main' branch
             steps{
+                script {
+                    // Use the withCredentials step to access AWS credentials by ID
+                    withCredentials([
+                        usernamePassword(
+                            credentialsId: '65b859fa-8c76-49a5-b70c-53b42326b02c', // Your AWS credentials ID in Jenkins
+                            usernameVariable: 'AKIARGWR6CGS3SJQEKM4',
+                            passwordVariable: '1rGp9F5yXO9nJTsvZxZEhaA7jTBlCs8fs42ptrCO'
+                        )
+                    ]) {
+
                 checkout([
                     $class: 'GitSCM', 
                     branches: [[name: 'main']], 
