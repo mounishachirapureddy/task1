@@ -15,8 +15,8 @@ pipeline {
                     withCredentials([
                         usernamePassword(
                             credentialsId: '65b859fa-8c76-49a5-b70c-53b42326b02c', // Your AWS credentials ID in Jenkins
-                            usernameVariable: 'AKIARGWR6CGS3SJQEKM4',
-                            passwordVariable: '1rGp9F5yXO9nJTsvZxZEhaA7jTBlCs8fs42ptrCO'
+                            usernameVariable: 'AKIARGWR6CGSTJVCA2QY',
+                            passwordVariable: 'CoAm9Y39uSYaApjgoYorr5Sz2cwBWurdzhn6yova'
                         )
                     ]) {
 
